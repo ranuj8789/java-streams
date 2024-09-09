@@ -39,16 +39,16 @@ public class JavaStream {
         List<String> wordsTest = Arrays.asList("apple", "banana", "kiwi", "mango", "strawberry");
         System.out.println(wordsTest.stream().sorted((x, y) -> x.length()).collect(Collectors.toList()));
 
-        // find average number
-//        List<Integer> numbersCheck = Arrays.asList(1, 2, 3, 4, 5);
-//        IntSummaryStatistics intSummaryStatistics = numbersCheck.stream().mapToInt(Integer::intValue).summaryStatistics();
-//        intSummaryStatistics.getAverage();
-//        intSummaryStatistics.getMax();
-//        intSummaryStatistics.getMin();
-//        intSummaryStatistics.getSum();
+//        find average number
+        List<Integer> numbersCheck = Arrays.asList(1, 2, 3, 4, 5);
+        IntSummaryStatistics intSummaryStatistics = numbersCheck.stream().mapToInt(Integer::intValue).summaryStatistics();
+        intSummaryStatistics.getAverage();
+        intSummaryStatistics.getMax();
+        intSummaryStatistics.getMin();
+        intSummaryStatistics.getSum();
 
         List<Integer> numbersTest = Arrays.asList(1, 2, 3, 4, 5);
-        System.out.println(numbersTest.stream().mapToInt(Integer::intValue).filter(x-> x== ma));
+        System.out.println(numbersTest.stream().mapToInt(Integer::intValue).sorted().skip(2).findFirst().getAsInt());
         System.out.println(numbersTest.stream().mapToInt(Integer::intValue).min());
         System.out.println(numbersTest.stream().mapToInt(Integer::intValue).average());
 
